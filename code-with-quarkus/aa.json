@@ -1,0 +1,369 @@
+{
+  "info": {
+    "name": "Generated API",
+    "_postman_id": "b2e7111b-6374-4ea7-830b-58cf62659588",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/"
+  },
+  "item": [
+    {
+      "id": "7fe27bc4-1650-4ba4-83ba-6ef52f0db0cc",
+      "name": "Another_GET",
+      "request": {
+        "url": {
+          "protocol": "https",
+          "host": "www.example.com",
+          "path": [
+            "another"
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "text/plain",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "disabled": false
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain",
+              "disabled": false
+            }
+          ],
+          "body": "response6",
+          "status": "OK",
+          "code": 200,
+          "name": "Response_200",
+          "id": "e764d0db-4232-4c89-951d-cd739644a4dd"
+        }
+      ]
+    },
+    {
+      "id": "581c41d2-b61e-48a2-b1da-77739b0a6a57",
+      "name": "Article_GET",
+      "request": {
+        "url": {
+          "protocol": "https",
+          "host": "www.example.com",
+          "path": [
+            "article"
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "disabled": false
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "disabled": false
+            }
+          ],
+          "body": "{\r\n  \"key1\": {\r\n    \"empty\": true\r\n  }\r\n}",
+          "status": "OK",
+          "code": 200,
+          "name": "Response_200",
+          "id": "1ac07812-36c4-4667-bb7e-710919af41b7"
+        }
+      ]
+    },
+    {
+      "id": "252e3bf6-a682-42da-b76a-9298d070b5b3",
+      "name": "GreetingByName_GET",
+      "request": {
+        "url": {
+          "protocol": "https",
+          "host": "www.example.com",
+          "path": [
+            "greeting",
+            ":name"
+          ],
+          "variable": [
+            {
+              "id": "name",
+              "value": "name6",
+              "type": "string",
+              "description": ""
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "text/plain",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "disabled": false
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain",
+              "disabled": false
+            }
+          ],
+          "body": "response6",
+          "status": "OK",
+          "code": 200,
+          "name": "Response_200",
+          "id": "664becaa-d80f-432f-bf07-162fa17f6c7a"
+        }
+      ]
+    },
+    {
+      "id": "accba8c4-17b3-41fc-afc7-cc55d7b50ddd",
+      "name": "Greeting2_GET",
+      "request": {
+        "url": {
+          "protocol": "https",
+          "host": "www.example.com",
+          "path": [
+            "greeting2"
+          ],
+          "query": [
+            {
+              "key": "name",
+              "value": "name6",
+              "description": "",
+              "disabled": false
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "text/plain",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "disabled": false
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain",
+              "disabled": false
+            }
+          ],
+          "body": "response6",
+          "status": "OK",
+          "code": 200,
+          "name": "Response_200",
+          "id": "c1c5212f-1088-456e-b61f-dca92797a135"
+        }
+      ]
+    },
+    {
+      "id": "2a74d0dd-7960-4e97-9683-39a522d543ca",
+      "name": "Hello_GET",
+      "request": {
+        "url": {
+          "protocol": "https",
+          "host": "www.example.com",
+          "path": [
+            "hello"
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "text/plain",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "disabled": false
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain",
+              "disabled": false
+            }
+          ],
+          "body": "response6",
+          "status": "OK",
+          "code": 200,
+          "name": "Response_200",
+          "id": "0ddb9cc3-eb12-4d0c-b68f-4e386f3e7139"
+        }
+      ]
+    },
+    {
+      "id": "a2c19eca-9a3a-4a25-85f9-3db68c062970",
+      "name": "Test_GET",
+      "request": {
+        "url": {
+          "protocol": "https",
+          "host": "www.example.com",
+          "path": [
+            "test"
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "text/plain",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "disabled": false
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain",
+              "disabled": false
+            }
+          ],
+          "body": "response6",
+          "status": "OK",
+          "code": 200,
+          "name": "Response_200",
+          "id": "c6004501-2a33-458f-a1d6-39e0d24f90d2"
+        }
+      ]
+    },
+    {
+      "id": "2ca99f74-77e0-42d2-aced-ec69d8022983",
+      "name": "Test_POST",
+      "request": {
+        "url": {
+          "protocol": "https",
+          "host": "www.example.com",
+          "path": [
+            "test"
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "disabled": false
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"address\": \"address75\",\r\n  \"id\": 193,\r\n  \"name\": \"name6\"\r\n}",
+          "disabled": false
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "disabled": false
+            }
+          ],
+          "body": "{\r\n  \"address\": \"address75\",\r\n  \"id\": 193,\r\n  \"name\": \"name6\"\r\n}",
+          "status": "OK",
+          "code": 200,
+          "name": "Response_200",
+          "id": "335bd1a9-ade2-4602-a05d-5e443ad70a5a"
+        }
+      ]
+    },
+    {
+      "id": "268dd080-34ca-4a1d-9553-48435beb9441",
+      "name": "TestSoap_GET",
+      "request": {
+        "url": {
+          "protocol": "https",
+          "host": "www.example.com",
+          "path": [
+            "test/soap"
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "text/plain",
+            "disabled": false
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "disabled": false
+        },
+        "description": ""
+      },
+      "response": [
+        {
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain",
+              "disabled": false
+            }
+          ],
+          "body": "response6",
+          "status": "OK",
+          "code": 200,
+          "name": "Response_200",
+          "id": "e403fdb3-7508-4d5d-8c54-a0e7de2e19d0"
+        }
+      ]
+    }
+  ],
+  "variable": []
+}

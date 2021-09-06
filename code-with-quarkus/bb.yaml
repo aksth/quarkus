@@ -1,0 +1,319 @@
+openapi: 3.0.0
+info:
+  title: Generated API
+  contact: {}
+  version: '1.0'
+servers:
+- url: https://www.example.com
+  variables: {}
+paths:
+  /another:
+    get:
+      tags:
+      - Misc
+      summary: Another_GET
+      description: ''
+      operationId: Another_GET
+      parameters:
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        style: simple
+        schema:
+          type: string
+          example: text/plain
+      responses:
+        200:
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: response6
+              example: response6
+      deprecated: false
+  /article:
+    get:
+      tags:
+      - Misc
+      summary: Article_GET
+      description: ''
+      operationId: Article_GET
+      parameters:
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        style: simple
+        schema:
+          type: string
+          example: application/json
+      responses:
+        200:
+          description: ''
+          headers: {}
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response_200'
+              example:
+                key1:
+                  empty: true
+      deprecated: false
+  /greeting/{name}:
+    get:
+      tags:
+      - Misc
+      summary: GreetingByName_GET
+      description: ''
+      operationId: GreetingByName_GET
+      parameters:
+      - name: name
+        in: path
+        description: ''
+        required: true
+        style: simple
+        schema:
+          type: string
+          example: name6
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        style: simple
+        schema:
+          type: string
+          example: text/plain
+      responses:
+        200:
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: response6
+              example: response6
+      deprecated: false
+  /greeting2:
+    get:
+      tags:
+      - Misc
+      summary: Greeting2_GET
+      description: ''
+      operationId: Greeting2_GET
+      parameters:
+      - name: name
+        in: query
+        description: ''
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: name6
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        style: simple
+        schema:
+          type: string
+          example: text/plain
+      responses:
+        200:
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: response6
+              example: response6
+      deprecated: false
+  /hello:
+    get:
+      tags:
+      - Misc
+      summary: Hello_GET
+      description: ''
+      operationId: Hello_GET
+      parameters:
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        style: simple
+        schema:
+          type: string
+          example: text/plain
+      responses:
+        200:
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: response6
+              example: response6
+      deprecated: false
+  /test:
+    get:
+      tags:
+      - Misc
+      summary: Test_GET
+      description: ''
+      operationId: Test_GET
+      parameters:
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        style: simple
+        schema:
+          type: string
+          example: text/plain
+      responses:
+        200:
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: response6
+              example: response6
+      deprecated: false
+    post:
+      tags:
+      - Misc
+      summary: Test_POST
+      description: ''
+      operationId: Test_POST
+      parameters:
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        style: simple
+        schema:
+          type: string
+          example: application/json
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Test_POST_Request'
+            example:
+              address: address75
+              id: 193
+              name: name6
+        required: true
+      responses:
+        200:
+          description: ''
+          headers: {}
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response_2001'
+              example:
+                address: address75
+                id: 193
+                name: name6
+      deprecated: false
+  /test/soap:
+    get:
+      tags:
+      - Misc
+      summary: TestSoap_GET
+      description: ''
+      operationId: TestSoap_GET
+      parameters:
+      - name: Accept
+        in: header
+        description: ''
+        required: true
+        style: simple
+        schema:
+          type: string
+          example: text/plain
+      responses:
+        200:
+          description: ''
+          headers: {}
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: response6
+              example: response6
+      deprecated: false
+components:
+  schemas:
+    Response_200:
+      title: Response_200
+      required:
+      - key1
+      type: object
+      properties:
+        key1:
+          $ref: '#/components/schemas/Key1'
+      example:
+        key1:
+          empty: true
+    Key1:
+      title: Key1
+      required:
+      - empty
+      type: object
+      properties:
+        empty:
+          type: boolean
+      example:
+        empty: true
+    Test_POST_Request:
+      title: Test_POST_Request
+      required:
+      - address
+      - id
+      - name
+      type: object
+      properties:
+        address:
+          type: string
+        id:
+          type: integer
+          format: int32
+        name:
+          type: string
+      example:
+        address: address75
+        id: 193
+        name: name6
+    Response_2001:
+      title: Response_2001
+      required:
+      - address
+      - id
+      - name
+      type: object
+      properties:
+        address:
+          type: string
+        id:
+          type: integer
+          format: int32
+        name:
+          type: string
+      example:
+        address: address75
+        id: 193
+        name: name6
+tags:
+- name: Misc
+  description: ''

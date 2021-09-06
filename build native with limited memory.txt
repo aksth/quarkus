@@ -1,0 +1,14 @@
+mvn clean package -Dnative -Dquarkus.profile=dockerrun -Dquarkus.native.native-image-xmx=8g
+
+<properties>
+    <quarkus.package.type>native</quarkus.package.type>
+    <!-- USE BELOW PROPERTY FROM COMMAND LINE IF POSSIBLE-->
+    <!-- <quarkus.native.additional-build-args>-J-Xmx5G</quarkus.native.additional-build-args> -->
+</properties>
+
+docker build -f src/main/docker/Dockerfile.native -t quarkus-quickstart/getting-started .
+
+
+docker build -f src/main/docker/Dockerfile.native -t ekycapi-app .
+
+

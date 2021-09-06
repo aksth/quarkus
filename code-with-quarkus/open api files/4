@@ -1,0 +1,139 @@
+---
+openapi: 3.0.1
+info:
+  title: Generated API
+  version: "1.0"
+paths:
+  /another:
+    get:
+      responses:
+        "200":
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+  /article:
+    get:
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MapStringList'
+  /greeting/{name}:
+    get:
+      parameters:
+      - name: name
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+  /greeting2:
+    get:
+      parameters:
+      - name: name
+        in: query
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+  /hello:
+    get:
+      responses:
+        "200":
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+  /test:
+    get:
+      responses:
+        "200":
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Person'
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Person'
+  /test/soap:
+    get:
+      responses:
+        "200":
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+  /testarray:
+    get:
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TemplateObject'
+components:
+  schemas:
+    ListArticle:
+      type: object
+      properties:
+        empty:
+          type: boolean
+    MapStringList:
+      type: object
+      additionalProperties:
+        $ref: '#/components/schemas/ListArticle'
+    Person:
+      type: object
+      properties:
+        address:
+          type: string
+        id:
+          format: int64
+          type: integer
+        name:
+          type: string
+    CustomField:
+      type: object
+      properties:
+        typeId:
+          type: string
+        value:
+          type: string
+    ListCustomField:
+      type: array
+      items:
+        $ref: '#/components/schemas/CustomField'
+    TemplateObject:
+      type: object
+      properties:
+        customFields:
+          $ref: '#/components/schemas/ListCustomField'
